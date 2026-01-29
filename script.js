@@ -91,6 +91,7 @@ function loadVideo(url) {
     document.addEventListener("DOMContentLoaded", () => {
       initTiltEffect();
       loadVideo("video.mp4");
+      initVisitsCounter()
     });
 
     function initVisitsCounter() {

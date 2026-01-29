@@ -13,11 +13,13 @@ body {
   width: 540px;
   max-width: 540px;
   min-height: 640px;
-align-items: center;
+  height: 500px;
+  align-items: center;
   background: linear-gradient(135deg, rgba(17,17,17,0.5), rgba(17,17,17,0.3));
   border-radius: 19px;
   backdrop-filter: blur(8px);
-
+  margin-left: 5px;
+  margin-right: 5px;
   transform-style: preserve-3d;
   will-change: transform;
   backface-visibility: hidden;
@@ -31,6 +33,7 @@ align-items: center;
     justify-content: center;
 }
 .avatar{
+    z-index: 10px;
     margin-top: 90px;
     display: block;
     width: 130px;
@@ -226,4 +229,26 @@ align-items: center;
     opacity: 0.88;
     filter: brightness(1);
   }
+}
+
+
+@media (max-width: 600px) {
+    .profile-card {
+        transform: scale(0.8);
+        height: 600px;
+    }
+}
+
+@media (max-width: 450px) {
+    .profile-card {
+        transform: scale(0.75);
+        height: 700px;
+    }
+}
+
+@media (max-width: 360px) {
+    .profile-card {
+        transform: scale(0.70);
+        height: 700px;
+    }
 }
