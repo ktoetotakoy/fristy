@@ -15,6 +15,13 @@ function loadVideo(url) {
   
   
   function initTiltEffect() {
+    if (
+        window.matchMedia("(hover: none)").matches ||
+        window.matchMedia("(pointer: coarse)").matches
+      ) {
+        return;
+      }
+    
       const card = document.querySelector(".profile-card");
       if (!card) return;
     
@@ -23,10 +30,10 @@ function loadVideo(url) {
       let isHovering = false;
       let rafId = null;
     
-      const MAX_TILT = 8;
+      const MAX_TILT = 12;
       const EASE = 0.22;
       const SPRING = 0.15;
-      const SCALE_OUT = 1.01;
+      const SCALE_OUT = 1.05;
     
       const animate = () => {
         rotX += (targetX - rotX) * EASE;
