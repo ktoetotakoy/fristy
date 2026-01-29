@@ -26,7 +26,7 @@ function loadVideo(url) {
       const MAX_TILT = 8;
       const EASE = 0.22;
       const SPRING = 0.15;
-      const SCALE_OUT = 1.07;
+      const SCALE_OUT = 1.01;
     
       const animate = () => {
         rotX += (targetX - rotX) * EASE;
