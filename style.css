@@ -1,0 +1,229 @@
+@import url('https://fonts.googleapis.com/css2?family=Kanit:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+body {
+    margin: 0;
+    min-height: 100svh; /* стабильнее чем vh */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow-x: hidden;
+}
+  
+.profile-card {
+  width: 540px;
+  max-width: 540px;
+  min-height: 640px;
+align-items: center;
+  background: linear-gradient(135deg, rgba(17,17,17,0.5), rgba(17,17,17,0.3));
+  border-radius: 19px;
+  backdrop-filter: blur(8px);
+
+  transform-style: preserve-3d;
+  will-change: transform;
+  backface-visibility: hidden;
+
+  transition: transform 0.11s ease;
+}
+
+.profile{
+    display: grid;
+    place-items: center;
+    justify-content: center;
+}
+.avatar{
+    margin-top: 90px;
+    display: block;
+    width: 130px;
+    border-radius: 90px;
+    transition: ease-out 0.2s;
+}
+
+.avatar:hover{
+    transform: scale(1.05);
+    transition: ease-out 0.2s;
+}
+.banner{
+    position: fixed;
+    top: 0; left: 0; width: 100%; height: 160px;
+    border-radius: 19px 19px 0px 0px;
+    background-size: cover;
+    background-position: center;
+    filter: brightness(0.7);
+    box-shadow: inset 0 0 40px rgba(0,0,0,0.6);  
+}
+.imgnick{
+    display: flex;
+    align-items: center;
+    gap: 6px;
+}
+.verif{
+    width: 35px;
+    margin-top: 8px;
+    transition: ease 0.2s;
+}
+.verif:hover{
+    transform: scale(1.1);
+    transition: ease 0.2s;
+}
+.nickname{
+    margin-top: 5px;
+    position: relative;
+    display: inline-block;
+    background-size: cover;
+    height: fit-content;
+    font-family: "Kanit", sans-serif;
+    font-size: 35px;
+    color: #fff;
+    background-image: url("https://r2.fakecrime.bio/assets/sparkles/white.gif");
+}
+
+.razdel,
+.vtoroy {
+  width: 88%;
+    height: 2px;
+    background-color: rgba(255, 255, 255, 0.55);
+    margin: 10px auto;
+}
+
+.icon { width: 18px; height: 18px; margin-right: 8px; vertical-align: middle; text-decoration: none;}
+.info {
+    width: 100%;
+    display:flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    margin: 29px 0px 29px 0px;
+    gap: 15px;
+  }
+  a{
+    font-family: "Kanit", sans-serif;
+  }
+.link {
+    text-decoration: none;
+    color: #fff;
+    background: rgba(8, 8, 8, 0.616);
+    border-radius: 16px;
+    box-shadow: 0 4px 30px rgba(0,0,0,0.1);
+    backdrop-filter: blur(13.3px);
+    padding: 10px 10px;
+    border: 2px solid transparent;
+    transition: all 0.3s ease;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.99rem;
+    min-width: 110px;
+    position: relative;
+  }
+  .link:hover { border-color: #fff; transform: scale(1.08); box-shadow: 0px 0px 69px -22px rgba(0,0,0,1);}
+  [data-tooltip] { position: relative; cursor: default; }
+  [data-tooltip]::after {
+    content: attr(data-tooltip);
+    position: absolute;
+    bottom: 120%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-6px);
+    background: rgba(8,8,8,0.9);
+    border-radius: 8px;
+    color: #fff;
+    padding: 5px 8px;
+    white-space: nowrap;
+    font-size: 0.85rem;
+    opacity: 0;
+    pointer-events: none;
+    transition: opacity 0.15s ease, transform 0.15s ease;
+    z-index: 9999;
+  }
+  [data-tooltip]:hover::after {
+    opacity: 1;
+    transform: translateX(-50%) translateY(0);
+  }
+  .tooltip[data-tooltip]::after {
+    bottom: auto;
+    top: -24px;
+    transform: translateX(-50%) translateY(-6px);
+  }
+  [data-tooltip].tooltip:hover::after {
+    transform: translateX(-50%) translateY(0);
+  }
+.player-music {
+    position: fixed;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    z-index: 10;
+}
+.visits-counter { position: absolute; top: 13px; right: 10px; z-index: 10; }
+.prosmotr {
+    font-family: "Kanit";
+    padding: 5px 12px;
+    border: 2px solid #fff;
+    border-radius: 20px;
+    font-size: 0.85rem;
+    color: #fff;
+    white-space: nowrap;
+    user-select: none;
+    cursor: default;
+    background: transparent;
+    transition: all 0.3s ease;
+    position: relative;
+  }
+  .prosmotr {font-family: "Kanit";};
+  .prosmotr { background: #ffffff0c; }
+  .prosmotr:hover, .achievement:hover {
+    background-color: rgba(255,255,255,0.24);
+    color: #eee;
+    transform: scale(1.07);
+    box-shadow: 0px 0px 69px -13px rgba(0,0,0,0.75);
+  }
+  .prosmotr svg { vertical-align: middle; margin-right: 4px; margin-bottom: 2px; height: 16px; fill: white; }
+#hxrdware-player{
+    position: fixed;
+    top: auto;
+    bottom: 15px;
+    left: 15px;
+    right: 37px;
+}
+.link:hover{
+    text-decoration: underline;
+}
+
+#bg-video{
+
+    position: fixed;
+    inset: 0;
+
+    width: 100vw;
+    height: 100vh;
+
+    object-fit: cover;
+    object-position: center;
+
+    z-index: -1;
+    pointer-events: none;
+
+    filter: brightness(0.9);
+}
+#crt-overlay {
+    position: fixed;
+    inset: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+#bg-video.fade-in {
+  opacity: 0;
+  animation: videoFadeIn 1s ease-in-out forwards;
+}
+
+@keyframes videoFadeIn {
+  0% {
+    opacity: 0;
+    filter: brightness(0.5);
+  }
+  100% {
+    opacity: 0.88;
+    filter: brightness(1);
+  }
+}
